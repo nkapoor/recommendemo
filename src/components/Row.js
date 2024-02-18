@@ -23,8 +23,8 @@ const Row = ({ title, fetchUrl, id, addRating }) => {
           "Access-Control-Allow-Origin": "*",
         },
       });
-      console.log(request.data.result);
-      setMovies(request.data.result);
+      //console.log(request.data.result);
+      setMovies(request.data.records);
       return request;
     }
 
@@ -52,7 +52,7 @@ const Row = ({ title, fetchUrl, id, addRating }) => {
         </div>
         <div id={id} className="row__posters">
           {/**SEVERAL ROW__POSTER */}
-          {movies.map((movie, idx) => (
+           { movies.map((movie, idx) => (
             <img
               key={idx}
               onClick={() => handleClick(movie)}
@@ -61,7 +61,8 @@ const Row = ({ title, fetchUrl, id, addRating }) => {
               loading="lazy"
               alt={movie.title}
             />
-          ))}
+          ))
+           }
         </div>
         <div className="slider__arrow-right">
           <span

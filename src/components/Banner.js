@@ -20,8 +20,8 @@ const Banner = () => {
       });
       //Give to our movie hook one of all the movies randomly
       setMovie(
-        request.data.result[
-          Math.floor(Math.random() * request.data.result.length - 1)
+        request.data.records[
+          Math.floor(Math.random() * request.data.records.length - 1)
         ]
       );
       return request;

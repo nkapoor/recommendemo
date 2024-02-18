@@ -7,7 +7,8 @@ import Nav from "./Nav";
 import Row from "./Row";
 
 const App = () => {
-  const [personalizeUrl, setPersonalizeUrl] = useState(baseUrl + "/all");
+  const [personalizeUrl, setPersonalizeUrl] = useState(baseUrl + "/genres/action");
+//  const [personalizeUrl, setPersonalizeUrl] = useState(baseUrl + "/all");
   const [myRating, setMyRating] = useState([]);
 
   const addRating = (rating) => {
