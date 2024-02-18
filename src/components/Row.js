@@ -23,6 +23,7 @@ const Row = ({ title, fetchUrl, id, addRating }) => {
           "Access-Control-Allow-Origin": "*",
         },
       });
+      console.log(request.data.result());
       setMovies(request.data.result);
       return request;
     }
